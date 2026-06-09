@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A Supabase-ready premium blogging homepage with featured stories, filters, and search." />
+    <title>Blogging Studio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main>
+      <nav class="navbar" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Blogging Studio home">
+          <span class="brand-mark">B</span>
+          <span>Blogging</span>
+        </a>
+        <div class="nav-links">
+          <a href="#stories">Stories</a>
+          <a href="#editor">Editor</a>
+          <a href="#database">Supabase</a>
+        </div>
+        <a class="nav-cta" href="#editor">Write now <span aria-hidden="true">✎</span></a>
+      </nav>
+
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <div class="eyebrow">✦ Picture-inspired blog experience</div>
+          <h1>Publish beautiful stories with a premium editorial layout.</h1>
+          <p>
+            A responsive blogging homepage with search, categories, featured articles, author metadata, and a
+            Supabase-ready content database.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#stories">Explore stories <span aria-hidden="true">→</span></a>
+            <a class="secondary-button" href="#database">Connect Supabase</a>
+          </div>
+        </div>
+
+        <article class="featured-card" aria-label="Featured article" id="featured-card"></article>
+      </section>
+
+      <section class="toolbar" id="stories">
+        <div>
+          <span class="section-kicker">Latest Articles</span>
+          <h2>Stories crafted for readers</h2>
+        </div>
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="Search posts" />
+        </label>
+      </section>
+
+      <div class="category-list" id="category-list" aria-label="Filter stories by category"></div>
+      <section class="post-grid" id="post-grid" aria-live="polite"></section>
+
+      <section class="editor-panel" id="editor">
+        <div>
+          <span class="section-kicker">Feature set</span>
+          <h2>Designed for a full blogging workflow</h2>
+          <p>
+            The interface supports editorial discovery, featured stories, filtering, and database-driven publishing while
+            staying close to a polished visual reference style.
+          </p>
+        </div>
+        <div class="feature-list">
+          <div><span aria-hidden="true">✎</span> Draft, publish, and feature articles from Supabase rows.</div>
+          <div><span aria-hidden="true">⌕</span> Search across title, excerpt, and category.</div>
+          <div><span aria-hidden="true">▣</span> Swap demo data for live database content with environment variables.</div>
+        </div>
+      </section>
+
+      <section class="database-callout" id="database">
+        <div>
+          <span class="section-kicker">Supabase status</span>
+          <h2 id="supabase-status">Using demo posts until Supabase keys are added.</h2>
+          <p>
+            Set <code>window.BLOG_SUPABASE_URL</code> and <code>window.BLOG_SUPABASE_ANON_KEY</code> before loading
+            <code>app.js</code>, then run the included SQL schema to power this blog from your Supabase project.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
